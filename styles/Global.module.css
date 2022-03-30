@@ -1,0 +1,10 @@
+.pageContainer {
+  min-width: 80rem;
+}
+
+@media screen and (max-width: 80rem) {
+  .pageContainer {
+    min-width: 100%;
+  }
+}
+

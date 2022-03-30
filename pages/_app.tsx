@@ -1,8 +1,43 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { pageTransition, pageVariants } from '../lib/animations';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const router = useRouter();
+
+  return (
+    <>
+      <Head>
+        <meta name="theme-color" content="#3b4191" />
+        <meta property="og:image" content="/KNL.webp" />
+        <meta
+          name="description"
+          content="Hello. I am Kyle Nguyen and I go by KuNet on the internet! Welcome to my site, KuNet.dev!"
+        />
+      </Head>
+      <div className={'pageContainer'}>
+        <LazyMotion features={domAnimation}>
+          <AnimatePresence>
+            <m.div
+              style={{ position: 'absolute' }}
+              initial={'initial'}
+              animate={'in'}
+              exit={'out'}
+              variants={pageVariants}
+              transition={pageTransition}
+              className={'animatedPage noOverflow'}
+              key={router.route}
+            >
+              <Component {...pageProps} />
+            </m.div>
+          </AnimatePresence>
+        </LazyMotion>
+      </div>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
