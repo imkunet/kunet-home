@@ -20,6 +20,7 @@ const About: NextPage = () => {
       <div className={globalStyles.pageContainer}>
         <div className={styles.aboutContainer}>
           <Image src={kyleImage} className={styles.aboutImage} alt={'Image of me'} />
+          <span className={styles.aboutName}>Kyle Nguyen</span>
         </div>
       </div>
       <Link href="/">go home</Link>

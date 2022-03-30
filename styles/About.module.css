@@ -7,16 +7,25 @@
 
 .aboutContainer {
   width: 100%;
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(48, 48, 48);
   padding: 2.5rem;
   border-radius: 1rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .aboutImage {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+}
+
+.aboutName {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .aboutHeader {

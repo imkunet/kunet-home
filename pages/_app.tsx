@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/KNL.webp" />
         <meta
           name="description"
-          content="Hello. I am Kyle Nguyen and I go by KuNet on the internet! Welcome to my site, KuNet.dev!"
+          content="Hello. My name is Kyle Nguyen and I go by KuNet on the internet! Welcome to my site, KuNet.dev!"
         />
       </Head>
       <div className={'pageContainer'}>
