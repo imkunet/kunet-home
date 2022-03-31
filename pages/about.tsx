@@ -5,8 +5,12 @@ import Link from 'next/link';
 import styles from '../styles/About.module.css';
 import globalStyles from '../styles/Global.module.css';
 import kyleImage from '../public/kyle.webp';
+import { useState } from 'react';
+import { AnimatePresence, m } from 'framer-motion';
 
 const About: NextPage = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className={styles.aboutPage}>
       <Head>
@@ -18,11 +22,20 @@ const About: NextPage = () => {
       </div>
 
       <div className={globalStyles.pageContainer}>
-        <div className={styles.aboutContainer}>
-          <Image src={kyleImage} className={styles.aboutImage} alt={'Image of me'} />
+        <m.div className={styles.aboutContainer} onClick={() => setOpen(true)}>
+          <m.div className={styles.aboutImageContainer}>
+            <Image src={kyleImage} className={styles.aboutImage} alt={'Kyle Nguyen'} />
+          </m.div>
           <span className={styles.aboutName}>Kyle Nguyen</span>
-        </div>
+        </m.div>
+
+        <AnimatePresence exitBeforeEnter>
+          {open && <m.div layout className={styles.aboutPageOverlay} onClick={() => setOpen(false)} />}
+        </AnimatePresence>
       </div>
+
+      <br />
+
       <Link href="/">go home</Link>
     </div>
   );
