@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { pageTransition, pageVariants } from '../lib/animations';
 import Head from 'next/head';
@@ -19,22 +19,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <div className={'pageContainer'}>
-        <LazyMotion features={domAnimation}>
-          <AnimatePresence>
-            <m.div
-              style={{ position: 'absolute' }}
-              initial={'initial'}
-              animate={'in'}
-              exit={'out'}
-              variants={pageVariants}
-              transition={pageTransition}
-              className={'animatedPage noOverflow'}
-              key={router.route}
-            >
-              <Component {...pageProps} />
-            </m.div>
-          </AnimatePresence>
-        </LazyMotion>
+        <AnimatePresence>
+          <motion.div
+            style={{ position: 'absolute' }}
+            initial={'initial'}
+            animate={'in'}
+            exit={'out'}
+            variants={pageVariants}
+            transition={pageTransition}
+            className={'animatedPage noOverflow'}
+            key={router.route}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </>
   );

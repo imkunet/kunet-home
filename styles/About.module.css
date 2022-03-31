@@ -25,7 +25,22 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0.15rem 0.75rem 2.5rem;
 }
 
+.aboutContainerOpen {
+  position: absolute;
+  border-radius: 1.5rem;
+  top: 5rem;
+  width: 80rem;
+  z-index: 10;
+  background-color: rgb(32, 32, 32);
+  background-size: 90%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .aboutPageOverlay {
+  cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;

@@ -1,7 +1,7 @@
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: '2.5rem'
+    y: '-5rem'
   },
   in: {
     opacity: 1,
@@ -9,7 +9,7 @@ const pageVariants = {
   },
   out: {
     opacity: 0,
-    y: '2.5rem'
+    y: '5rem'
   }
 };
 
