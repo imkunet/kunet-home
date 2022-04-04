@@ -7,7 +7,6 @@
 
 .aboutContainer {
   width: 50%;
-  padding: 2.5rem;
   border-radius: 1rem;
   cursor: pointer;
   display: flex;
@@ -31,9 +30,7 @@
   top: 5rem;
   width: 80rem;
   z-index: 10;
-  background-color: rgb(32, 32, 32);
-  background-size: 90%;
-  padding: 2.5rem;
+  background-color: rgb(20, 20, 20);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +49,7 @@
 
 .aboutImageContainer {
   pointer-events: none !important;
+  margin: 2.5rem 2.5rem 1rem 2.5rem;
 }
 
 .aboutImage {
@@ -62,9 +60,19 @@
 }
 
 .aboutName {
-  margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.aboutNameOpen {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+
+  background: -webkit-linear-gradient(326deg, rgba(204,91,235,1) 0%, rgba(0,201,238,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .aboutHeader {
@@ -75,13 +83,34 @@
   padding: 2rem;
 }
 
+.aboutContentContainer {
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.aboutContent {
+  margin: 1.5rem;
+  width: 100%;
+}
+
+.aboutContentHeader {
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 80rem) {
   .aboutHeader {
     text-align: left;
   }
 
   .aboutContainer {
-    border-radius: 0;
+    width: 85%;
+  }
+
+  .aboutContainerOpen {
+    width: 100%;
   }
 }
 

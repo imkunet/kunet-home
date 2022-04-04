@@ -23,7 +23,7 @@ const About: NextPage = () => {
       </div>
 
       <motion.div className={globalStyles.pageContainer}>
-        <MotionConfig transition={{ type: 'spring', stiffness: 400, damping: 40 }}>
+        <MotionConfig transition={{ type: 'spring', stiffness: 600, damping: 50 }}>
           <motion.div className={globalStyles.justifyCenter}>
             <motion.div
               className={styles.aboutContainer}
@@ -34,7 +34,10 @@ const About: NextPage = () => {
               <motion.div className={styles.aboutImageContainer} layoutId={'aboutImageContainer'} layout={'position'}>
                 <Image src={kyleImage} className={styles.aboutImage} alt={'Kyle Nguyen'} />
               </motion.div>
-              <span className={styles.aboutName}>Kyle Nguyen</span>
+              <motion.span className={styles.aboutName} layoutId={'aboutName'}>
+                Kyle Nguyen
+              </motion.span>
+              <motion.div layoutId={'aboutContentContainer'} className={styles.aboutContentContainer} />
             </motion.div>
           </motion.div>
 
@@ -57,10 +60,30 @@ const About: NextPage = () => {
                   >
                     <Image src={kyleImage} className={styles.aboutImage} alt={'Kyle Nguyen'} />
                   </motion.div>
-                  <motion.div>
+                  <motion.span className={styles.aboutNameOpen} layoutId={'aboutName'}>
                     Kyle Nguyen
-                    <br />
-                    Hello world, it&apos;s kyle!
+                  </motion.span>
+                  <motion.div layoutId={'aboutContentContainer'} className={styles.aboutContentContainer}>
+                    <motion.div className={styles.aboutContent}>
+                      <span className={styles.aboutContentHeader}>
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                        Hello World!
+                        <br />
+                      </span>
+                    </motion.div>
                   </motion.div>
                 </motion.div>
               </>
