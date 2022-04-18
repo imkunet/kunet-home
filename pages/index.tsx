@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import AboutCard from '../components/AboutCard';
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home</title>
       </Head>
-      home go to about <Link href="/about">go home</Link>
+      <AboutCard />
     </>
   );
 };

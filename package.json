@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.0.8",
+    "@types/three": "^0.139.0",
     "framer-motion": "^6.2.8",
     "next": "12.1.2",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "use-keyboard-shortcuts": "^2.2.2"
   },
   "devDependencies": {
     "@types/node": "17.0.23",

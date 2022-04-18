@@ -1,28 +1,24 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from '../styles/About.module.css';
 import globalStyles from '../styles/Global.module.css';
 import kyleImage from '../public/kyle.webp';
-import { useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import AnimatedText from '../components/AnimatedText';
+import { useKeyboardShortcuts } from 'use-keyboard-shortcuts';
 
-const About: NextPage = () => {
+const AboutCard: FunctionComponent = () => {
   const [open, setOpen] = useState(false);
+
+  useKeyboardShortcuts([{ keys: ['Escape'], onEvent: () => setOpen(false) }]);
 
   return (
     <motion.div className={styles.aboutPage}>
-      <Head>
-        <title>About Me</title>
-      </Head>
-
-      <div className={styles.aboutHeader}>
-        <AnimatedText title={'About Me'} />
-      </div>
-
       <motion.div className={globalStyles.pageContainer}>
+        <div className={styles.aboutHeader}>
+          <AnimatedText title={'About Me'} />
+        </div>
+
         <MotionConfig transition={{ type: 'spring', stiffness: 600, damping: 50 }}>
           <motion.div className={globalStyles.justifyCenter}>
             <motion.div
@@ -60,29 +56,23 @@ const About: NextPage = () => {
                   >
                     <Image src={kyleImage} className={styles.aboutImage} alt={'Kyle Nguyen'} />
                   </motion.div>
-                  <motion.span className={styles.aboutNameOpen} layoutId={'aboutName'}>
+                  <motion.span className={styles.aboutName} layoutId={'aboutName'}>
                     Kyle Nguyen
                   </motion.span>
                   <motion.div layoutId={'aboutContentContainer'} className={styles.aboutContentContainer}>
                     <motion.div className={styles.aboutContent}>
                       <span className={styles.aboutContentHeader}>
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
-                        <br />
-                        Hello World!
+                        🌸 Hello World!
                         <br />
                       </span>
+                      <hr />
+                      Hi! My name is <span className={styles.textGradient}>Kyle Nguyen</span> and I&apos;m a software
+                      engineer based in the Bay Area 🌉. On the internet, I&apos;m called ✨ KuNet ✨ which is based off
+                      of my name. My pronouns are they/he 👋.
+                      <br />
+                      <br />
+                      Currently, I&apos;m a 17 year old high school student but am planning to go to college to study
+                      Computer Science 💻. My passions include swimming 🏊 and playing video games 🎮.
                     </motion.div>
                   </motion.div>
                 </motion.div>
@@ -91,12 +81,8 @@ const About: NextPage = () => {
           </AnimatePresence>
         </MotionConfig>
       </motion.div>
-
-      <br />
-
-      <Link href="/">go home</Link>
     </motion.div>
   );
 };
 
-export default About;
+export default AboutCard;

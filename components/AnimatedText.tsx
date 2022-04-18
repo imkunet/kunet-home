@@ -5,19 +5,20 @@ const animatedText = {
   in: {
     transition: {
       delayChildren: 0.15,
-      staggerChildren: 0.1
+      staggerChildren: 0.025
     }
   }
 };
 
 const letterAnimation = {
-  initial: { y: 30, opacity: 0 },
+  initial: { y: 50, opacity: 0 },
   in: {
     y: 0,
     opacity: 1,
     transition: {
-      ease: [0.145, 0.095, 0.0, 1.0],
-      duration: 1
+      type: 'spring',
+      stiffness: 125,
+      damping: 10
     }
   }
 };
