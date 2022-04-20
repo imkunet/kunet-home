@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { FunctionComponent } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const animatedText = {
   in: {
@@ -18,7 +19,8 @@ const letterAnimation = {
     transition: {
       type: 'spring',
       stiffness: 125,
-      damping: 10
+      damping: 10,
+      delay: 0.2
     }
   }
 };
@@ -28,12 +30,18 @@ interface AnimatedTextProps {
 }
 
 const AnimatedText: FunctionComponent<AnimatedTextProps> = (props: AnimatedTextProps) => {
+  const animationControls = useAnimation();
+  const { inView, ref } = useInView();
+
+  if (inView) animationControls.start(letterAnimation.in);
+
   return (
-    <motion.span variants={animatedText} initial={'initial'} animate={'in'}>
+    <motion.span ref={ref} variants={animatedText} initial={'initial'} animate={'in'}>
       {props.title.split('').map((letter, index) => (
         <motion.span
           style={{ display: 'inline-block', width: letter === ' ' ? '0.5ch' : '' }}
-          variants={letterAnimation}
+          initial={letterAnimation.initial}
+          animate={animationControls}
           key={index}
         >
           {letter}

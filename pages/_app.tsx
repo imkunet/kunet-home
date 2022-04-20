@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             exit={'out'}
             variants={pageVariants}
             transition={pageTransition}
-            className={'animatedPage noOverflow'}
+            className={'animatedPage'}
             key={router.route}
           >
             <Component {...pageProps} />

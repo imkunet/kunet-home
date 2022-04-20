@@ -13,3 +13,11 @@
   display: flex;
   justify-content: center;
 }
+
+.headerText {
+  width: 100%;
+  text-align: left;
+  font-weight: 800;
+  font-size: 4rem;
+  padding: 2rem;
+}

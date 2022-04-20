@@ -15,6 +15,7 @@
     "next": "12.1.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-intersection-observer": "^8.34.0",
     "use-keyboard-shortcuts": "^2.2.2"
   },
   "devDependencies": {
