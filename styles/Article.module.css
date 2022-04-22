@@ -1,0 +1,12 @@
+.articleTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.articleSubtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: rgb(211, 211, 211);
+}

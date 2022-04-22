@@ -16,49 +16,6 @@ const Home: NextPage = () => {
         <motion.div className={globalStyles.pageContainer}>
           <div className={globalStyles.headerText}>
             <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
-            <AnimatedText title={'KuNet'} />
-            <br />
           </div>
         </motion.div>
       </div>
