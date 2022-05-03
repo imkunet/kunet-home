@@ -14,7 +14,7 @@ const Article: NextPage = () => {
   return (
     <div className={globalStyles.justifyCenter}>
       <div className={styles.articleContainer}>
-        <h1 className={styles.articleTitle}>The Fairy Tale of &quot;Journalistic Integrity&quot;</h1>
+        <h1 className={styles.articleTitle}>The Tragic Fate of &quot;Journalistic Integrity&quot;</h1>
         <p className={styles.articleSubtitle}>If you look too far beyond the horizon, the sun will burn your eyes</p>
         <div className={styles.articleAuthorContainer}>
           <div className={styles.articleAuthorImageContainer}>
@@ -47,7 +47,11 @@ const Article: NextPage = () => {
           </p>
         </div>
 
-        <div className={styles.articleFooter}>HEY!</div>
+        <div className={styles.articleFooter}>
+          <div className={styles.articleFooterLeft}>hey!</div>
+          <div className={styles.articleFooterSpacer}></div>
+          <div className={styles.articleFooterRight}>thanks for taking the time to read to the end of the article!</div>
+        </div>
       </div>
     </div>
   );

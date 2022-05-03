@@ -2,12 +2,6 @@
   max-width: 60rem;
 }
 
-@media screen and (max-width: 80rem) {
-  .articleContainer {
-    min-width: 100%;
-  }
-}
-
 .articleTitle {
   font-size: 5rem;
   font-weight: bold;
@@ -54,6 +48,8 @@
   width: 100%;
   background:rgba(88, 88, 88, 0.452);
   height: 0.1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .articleContent > h2 {
@@ -69,9 +65,64 @@
 }
 
 .articleFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 4rem;
   width: 100%;
-  height: 12rem;
-  background:rgba(88, 88, 88, 0.15);
+  background: rgba(88, 88, 88, 0.15);
   border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.articleFooterLeft {
+  font-size: 6rem;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.articleFooterRight {
+  margin: 2rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: rgb(184, 184, 184);
+}
+
+.articleFooterSpacer {
+  height: 6rem;
+  background:rgba(88, 88, 88, 0.452);
+  width: 0.1rem;
+}
+
+@media screen and (max-width: 60rem) {
+  .articleContainer {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+  }
+
+  .articleTitle {
+    font-size: 3rem;
+  }
+
+  .articleSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .articleContent > h2 {
+    font-size: 2.5rem;
+  }
+  
+  .articleContent > p {
+    font-size: 1.5rem;
+  }
+
+  .articleFooter {
+    flex-direction: column;
+  }
+
+  .articleFooterSpacer {
+    width: 80%;
+    height: 0.1rem;
+  }
 }
